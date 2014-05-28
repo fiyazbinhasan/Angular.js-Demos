@@ -1,0 +1,14 @@
+﻿<div class="row" style="margin-top: 50px;">
+    <div class="col-md-3 animate" data-ng-repeat="person in people">
+        <blockquote>
+            <div class="row">
+                <p>{{person.name}}</p>
+                <small>{{person.designation}}</small>
+            </div>
+            <div class="row" style="padding-top: 15px;">
+                <a class="btn btn-primary" href="#/Edit/{{person.personId}}"><i class="glyphicon glyphicon-pencil"></i></a>
+                <button class="btn btn-danger" ng-click="deletePerson(person)"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+        </blockquote>
+    </div>
+</div>

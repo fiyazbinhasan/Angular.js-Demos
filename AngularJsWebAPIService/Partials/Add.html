@@ -1,0 +1,16 @@
+﻿<div class="row">
+    <form ng-submit="addPerson()" class="col-md-4" name="form" novalidate>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="name" data-ng-model="newPerson.name" name="name" ng-maxlength="20" ng-minlength="3" required>
+            <div class="error" ng-show="form.name.$dirty && form.name.$invalid">
+                <small class="error" ng-show="form.name.$error.required">Name is required</small>
+                <small class="error" ng-show="form.name.$error.minlength">Name cant be less than 3 charecters</small>
+                <small class="error" ng-show="form.name.$error.maxlength">Name cant be longer than 20 charecters</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="designation" data-ng-model="newPerson.designation" name="designation" required>
+        </div>
+        <button type="submit" class="btn btn-default">Save</button>
+    </form>
+</div>

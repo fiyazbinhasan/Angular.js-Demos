@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-ng-app="demoApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Demo</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap.lumen.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Angular</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse pull-right">
+                <ul class="nav navbar-nav">
+                    <li id="person" class="active"><a href="#/Demo1">DomoView1</a></li>
+                    <li id="designation"><a href="#/Demo2">DemoView2</a></li>
+                    <li id="designation"><a href="#/Demo3">DemoView3</a></li>
+                    <li id="designation"><a href="#/Demo4">DemoView4</a></li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#/Value" class="dropdown-toggle" data-toggle="dropdown">Providers <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="designation"><a href="#/Value">Value</a></li>
+                            <li id="designation"><a href="#/Factory">Factory</a></li>
+                            <li id="designation"><a href="#/Service">Service</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="container" style="padding-top: 25px;">
+        <div data-ng-view></div>
+    </div>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/App.js"></script>
+    <script type="text/javascript">
+        (function () {
+            var randomh = Math.random();
+            var e = document.getElementsByTagName("script")[4];
+            var d = document.createElement("script");
+            d.src = "Scripts/App.js?x=" + randomh + "";
+            d.type = "text/javascript";
+            d.async = true;
+            d.defer = true;
+            e.parentNode.replaceChild(d, e);
+        })();
+    </script>
+
+</body>
+
+</html>

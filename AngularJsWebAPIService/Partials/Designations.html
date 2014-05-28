@@ -1,0 +1,16 @@
+﻿<div class="row" style="margin-top: 50px;">
+    <table class="table table-bordered table-striped table-responsive">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Designation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-animate="'animate'" data-ng-repeat="person in people">
+                <td>{{persons.indexOf(person) + 1}}</td>
+                <td>{{person.designation}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

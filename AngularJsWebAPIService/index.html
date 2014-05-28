@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="genweb2App">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Demo</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap.readable.css" rel="stylesheet" />
+    <link href="Content/angular.site.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="nav navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="30b27a8.png" /> internals</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li id="person" class="active"><a href="#/Persons">Persons</a></li>
+                        <li id="designation"><a href="#/Designations">Designations</a></li>
+                        <li id="add"><a href="#/Add">Add</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="padding-top: 25px;">
+        <div data-ng-view></div>
+    </div>
+    <script src="Scripts/jquery-2.1.0.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
+    <script src="Scripts/App/app.js"></script>
+    <script src="Scripts/App/personControllerWithResource.js"></script>
+    <script src="Scripts/App/stylingScript.js"></script>
+    <script type="text/javascript">
+        (function () {
+            var randomh = Math.random();
+            var e = document.getElementsByTagName("script")[7];
+            var d = document.createElement("script");
+            d.src = "Scripts/App/personControllerWithResource.js?x=" + randomh + "";
+            d.type = "text/javascript";
+            d.async = true;
+            d.defer = true;
+            e.parentNode.replaceChild(d, e);
+        })();
+    </script>
+</body>
+
+</html>
